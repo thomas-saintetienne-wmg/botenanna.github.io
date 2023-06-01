@@ -1,1 +1,104 @@
-# botenanna.github.io
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boten Anna</title>
+    <link rel="stylesheet" href="body1.css">
+
+  <style>
+body {
+  font-family: Verdana, Arial, sans-serif;
+  background-color: #e8e8e8;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333333;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.chat {
+  height: 300px;
+  overflow-y: scroll;
+  border: 2px solid #cccccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.user {
+  background-color: #fff5cc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.bot {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 14px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ffb700;
+  border: none;
+  color: #333333;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #ffcc33;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Boten Anna</h1>
+    <div class="chat" id="chat"></div>
+    <input type="text" id="messageInput" placeholder="Enter your guess">
+    <button id="sendButton">Send</button>
+    <div id="audioContainer" style="display: none;">
+  <audio id="audioPlayer" controls></audio>
+  </div>
+  <div id="gifContainer" style="display: none;">
+  <img id="gif1" src="gifgif2.gif" alt="GIF 1" style="display: none;">
+  <img id="gif2" src="gifgif.gif" alt="GIF 2" class="pumping-gif" style="display: none;">
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
+
