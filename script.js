@@ -11,11 +11,6 @@ const songs = [
   }
 ];
 
-const answers = {
-  'hello': 'Hi, how can I help you?',
-  'how are you': 'I am doing well, thank you!',
-  'goodbye': 'Goodbye! Have a nice day!'
-};
 const correctArtist = "Victor Leksell";
 const alternativeResponses = [
   "Oops, that's not quite right.",
@@ -89,14 +84,6 @@ function getAudioURLForCorrectArtist() {
 function getRandomResponse() {
   const randomIndex = Math.floor(Math.random() * alternativeResponses.length);
   return alternativeResponses[randomIndex];
-}
-function getBotResponse(userMessage) {
-  const lowercaseMessage = userMessage.toLowerCase();
-  if (lowercaseMessage in answers) {
-    return answers[lowercaseMessage];
-  } else {
-    return "Sorry, I didn't understand your message.";
-  }
 }
 
 function displayMessage(message, sender) {
