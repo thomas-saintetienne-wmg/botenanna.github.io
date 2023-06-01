@@ -22,6 +22,14 @@ const alternativeResponses = [
 
 sendButton.addEventListener('click', handleUserInput);
 
+// Function to display an introductory message
+function displayIntroMessage() {
+  const introMessage = "Hej, jag heter Anna. Vet du vem som sjunger om mig ?";
+  displayMessage(introMessage, 'bot');
+}
+
+// Call the displayIntroMessage function when the page loads
+window.addEventListener('load', displayIntroMessage);
 
 function showAudioPlayer() {
   const audioContainer = document.getElementById('audioContainer');
