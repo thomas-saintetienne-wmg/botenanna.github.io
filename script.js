@@ -22,14 +22,34 @@ const alternativeResponses = [
 
 sendButton.addEventListener('click', handleUserInput);
 
+function showChatbox() {
+  const enterButton = document.getElementById('enterButton');
+  const chatboxContainer = document.getElementById('chatboxContainer');
+  enterButton.style.display = 'none';
+  chatboxContainer.style.display = 'block';
+  playIntroAudio();
+  displayIntroMessage();
+}
+
+
+// Play intro message 
+function playIntroAudio() {
+  const introAudio = document.getElementById('introAudio');
+  introAudio.play();
+  introAudio.onended = function() {
+  };
+}
+
+
 // Function to display an introductory message
 function displayIntroMessage() {
   const introMessage = "Hej, jag heter Anna. Vet du vem som sjunger om mig ?";
   displayMessage(introMessage, 'bot');
+  playIntroAudio();
 }
 
 // Call the displayIntroMessage function when the page loads
-window.addEventListener('load', displayIntroMessage);
+window.addEventListener('load', playIntroAudio);
 
 function showAudioPlayer() {
   const audioContainer = document.getElementById('audioContainer');
@@ -65,6 +85,8 @@ function handleUserInput() {
 
   messageInput.value = '';
 }
+
+
 
 function showGif(gifId) {
   const gif = document.getElementById(gifId);
@@ -106,4 +128,3 @@ function animateGif(gifId) {
   const gif = document.getElementById(gifId);
   gif.style.display = 'block';
 }
-
