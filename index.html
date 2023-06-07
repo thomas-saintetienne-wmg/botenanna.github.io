@@ -86,13 +86,19 @@ button:hover {
   </style>
 </head>
 <body>
+    <div class="center-container">
+    <button id="enterButton" onclick="showChatbox()">Hej Bot</button>
+      <div id="chatboxContainer" style="display: none;">
   <div class="container">
     <h1>Boten Anna</h1>
     <div class="chat" id="chat"></div>
     <input type="text" id="messageInput" placeholder="Enter your guess">
-    <button id="sendButton">Send</button>
+    <button id="sendButton">Skicka</button>
+    </div>
     <div id="audioContainer" style="display: none;">
   <audio id="audioPlayer" controls></audio>
+  <audio id="introAudio">   
+    <source src="Hej_answer.mp3" type="audio/mpeg"> </audio>
   </div>
   <div id="gifContainer" style="display: none;">
   <img id="gif1" src="gifgif2.gif" alt="GIF 1" style="display: none;">
@@ -101,4 +107,3 @@ button:hover {
   <script src="script.js"></script>
 </body>
 </html>
-
