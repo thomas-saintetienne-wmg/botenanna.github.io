@@ -16,3 +16,15 @@
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#enterButton {
+  font-size: 16px;
+  padding: 10px 20px;
+}
